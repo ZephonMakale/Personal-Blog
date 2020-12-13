@@ -9,10 +9,10 @@ The user would want to:
 * Register and Login into their account.
 * Create profile.
 * Create pitches
-* Like other users's pitches.
+* Like other user's pitches.
 * Comment on other user's pitches.
 ## Technologies used
-I created the project with (python 3.8), Flask-Microframework.
+I created the project with (python 3.8), Flask-Microframework, heroku server.
 
 ## Setup/Installation Requirements
  ### The project require the following installations
@@ -23,7 +23,7 @@ I created the project with (python 3.8), Flask-Microframework.
 
  ### Cloning
    * Open terminal in your computer
-   * git clone https://github.com/ZephonMakale/PITCH-APP
+   * git clone https://github.com/ZephonMakale/Personal-Blog
    * cd PITCH-APP
    * code . this will open your editor with the project automatically.
  ### Commands to run the application
@@ -31,7 +31,7 @@ I created the project with (python 3.8), Flask-Microframework.
     $ chomd +x run.py
     $ ./start.sh
  ### Development
-    Want to contibute? Awesome!
+    Want to contribute? Awesome!
     To fix a bug or enhance the project, follow these steps:
    * Fork the repo
    * Create a new branch (git checkout -b improve-some-features)
