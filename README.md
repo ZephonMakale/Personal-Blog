@@ -1,6 +1,6 @@
 ## Author By
 Zephon Makale
-## Pitch-App
+## Quotes-App
 This project was generated with [Python 3.8] version and the Flask micro-framework
 ## Description
 This is my Pitch App web application which allows users to register, login, logout, create and view their profiles, create pitches, comment and like other users pitches.
@@ -30,6 +30,7 @@ I created the project with (python 3.8), Flask-Microframework, heroku server.
    * Open the cloned file in terminal and run the commands below.
     $ chomd +x run.py
     $ ./start.sh
+
  ### Development
     Want to contribute? Awesome!
     To fix a bug or enhance the project, follow these steps:
