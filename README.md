@@ -50,7 +50,7 @@ I created the project with (python 3.8), Flask-Microframework, heroku server.
 If you find a bug(the program gave an undesired results), kindly open an issue here by including your question and the expected results.
 
 ## Contact Information
-Incase you have a query or contributions , please email me at(zephon.makalle@gmail.com)
+Incase you have a query or contributions, please email me at(zephon.makalle@gmail.com)
 
 ## License
    * See below for more details on licensing.
