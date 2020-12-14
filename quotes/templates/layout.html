@@ -31,14 +31,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     {% if title %}
-    <title>Pitch App - {{title}}</title>
+    <title>Quotes-Blog App - {{title}}</title>
     {% else %}
-    <title>Pitch App</title>
+    <title>Quotes-Blog App</title>
     {% endif %}
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Quote-App</a>
+      <a class="navbar-brand" href="#">Quotes-Blog</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -53,7 +53,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav navbar-nav">
           <li class="active"><a class="active" href="{{url_for('main.home')}}">Home</a></li>
-          <li><a href="{{url_for('main.about')}}">About</a></li>
+          <li><a href="{{url_for('main.blogs')}}">Blogs</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {% if current_user.is_authenticated %}

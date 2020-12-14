@@ -1,4 +1,5 @@
 virtual/
 *.pyc
-env/
+.env
+.config.py
 
