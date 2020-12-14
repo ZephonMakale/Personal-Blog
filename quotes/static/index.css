@@ -8,6 +8,11 @@ body {
   color: #333333;
   /* margin-top: 5rem; */
 }
+.paral a {
+  border-radius: 0px;
+  margin-left: 40%;
+  margin-right: 40;
+  }
 
 h1,
 h2,
