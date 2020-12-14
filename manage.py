@@ -4,8 +4,8 @@ from quotes.models import User, Post
 from quotes import create_app, db
 
 
-app = create_app('development')
-# app = create_app('production')
+# app = create_app('development')
+app = create_app('production')
 
 
 
