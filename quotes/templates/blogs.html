@@ -1,28 +1,40 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <h1 style="text-align: center;">Welcome to my random quotes page </h1>
-    <div class="col-md-4">
-        <div class="container">
-            <div class="content-section">
-                <div class="card-title">
-                    <h4>A quote by: <span style="color: rgb(3, 3, 3)">{{quote.author}}</span> </h4>
-                </div>
-                <p class="card-text">{{quote.quote}}</p>
+    <div class= "container">
+        <div class="col-md-4">
+            <div class="container">
+                <h1 class="text-center">Welcome to my random quotes page </h1>
+                
+                <p class="text-center cite">{{quote.quote}}</p>
+                <p class="text-center text-muted">--<span style="color: rgb(3, 3, 3)">{{quote.author}}</span> </p>
+                
             </div>
         </div>
+
     </div>
+    <div class="jumbotron">
+        <h1 class= "text-center">A hand picked selection of quotes from the field of computer science.</h1>
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+    
+    
 {% endblock content %}
-<div class="col-md-4">
-    <div class="content-section">
-      <h3>Side Bar</h3>
-      <p class="text-muted">You can put any information you would like</p>
-      <br>
-      
-        <p class="ml-4">Different categories of pitches</p>
-        <hr>
-        <p class="ml-4">Profile</p>
-        <hr>
-        <p class="ml-4">Profile photo</p>
-      
+
+  <article class="media content-section">
+    <img class="rounded-circle article-img" src="{{url_for('static', filename= 'profile_pics/' + post.author.image_file)}}">
+    <div class="media-body">
+        <div class = .article-metadata>
+        <a class="mr-2" href="{{url_for('users.user_posts', username= post.author.username) }}"> {{post.author.username}}</a>
+        <small class="text-muted">{{post.date_posted.strftime('%Y-%m-%d')}}</small>
+        </div>
+        <h2><a class="article-title" href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a></h2>
+        <p class="article-content">{{post.content}}</p>
+
     </div>
-  </div>
+</article>
