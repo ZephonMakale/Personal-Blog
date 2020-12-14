@@ -1,16 +1,15 @@
 {% extends 'layout.html' %}
 {% block content %}
 <p class="lead paral rounded-0">
-    <a class="btn btn-primary btn-md" href="#" role="button">New Quotes</a>
+    <a class="btn btn-primary btn-md" href="#" role="button">New Quote</a>
 </p>
-{% for quote in quotes %}
     <div class="jumbotron">
         
             <blockquote>
-                <h4 class="lead font-weight-bold text-center" style="line-height:180%;"><q>{{quote.quote}}</q></h4>    
+                <h4 class="lead font-weight-bold text-center" style="line-height:180%;"><q>{{quotes.quote}}</q></h4>    
             </blockquote>
-            <p class="lead text-center"> &mdash; {{quote.author}}</p>
+            <p class="lead text-center"> &mdash; {{quotes.author}}</p>
         
     </div>
-{% endfor %}
+
 {% endblock content %}

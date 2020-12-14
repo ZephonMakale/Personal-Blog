@@ -7,12 +7,14 @@
                 <div class = .article-metadata>
                 <a class="mr-2" href="{{url_for('users.user_posts', username= post.author.username) }}"> {{post.author.username}}</a>
                 <small class="text-muted">{{post.date_posted.strftime('%Y-%m-%d')}}</small>
-                </div>
-                <h2><a class="article-title" href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a></h2>
+                <hr>
+                <h3><a class="article-title" href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a></h3>
                 <p class="article-content">{{post.content}}</p>
                 <p class="lead parall rounded-0">
                     <a class="btn btn-primary btn-md" href="{{url_for('posts.new_comment', id=post.id )}}">Comment</a>
                 </p>
+                </div>
+        
 
         
             </div>
