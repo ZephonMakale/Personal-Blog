@@ -1,6 +1,7 @@
 import os
 
 class Config:
+    QUOTES_API_KEY = 'http://quotes.stormconsultancy.co.uk/quotes.json'
     SECRET_KEY = 'pitch'
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://macbookpro:1Chelsea@localhost/pitches'
     UPLOADED_PHOTOS_DEST ='app/static/photos'

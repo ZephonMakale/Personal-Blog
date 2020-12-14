@@ -10,6 +10,10 @@
                 </div>
                 <h2><a class="article-title" href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a></h2>
                 <p class="article-content">{{post.content}}</p>
+                <p class="lead parall rounded-0">
+                    <a class="btn btn-primary btn-md" href="{{url_for('posts.new_comment', id=post.id )}}">Comment</a>
+                </p>
+
         
             </div>
         </article>

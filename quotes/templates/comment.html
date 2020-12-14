@@ -1,0 +1,17 @@
+{% import "bootstrap/wtf.html" as wtf %} {% extends 'layout.html' %} {% block
+content %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class=".article-metadata">
+      <h3 class="text-center">{{wtf.quick_form(form)}}</h3>
+      {% for comment in postComment %}
+      <p class="article-title">{{comment.comment}}</p>
+      <p>{{comment.date_posted.strftime("%Y-%m-%d")}}</p>
+      <p class="article-content">By: {{comment.user.username}}</p>
+
+      {% endfor%}
+    </div>
+  </div>
+</article>
+
+{% endblock content %}

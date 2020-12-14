@@ -42,3 +42,27 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
+
+class Comment(db.Model):
+    __tablename__ = 'comments'
+    id = db.Column(db.Integer,primary_key = True)
+    comment = db.Column(db.Text(), nullable = False)
+    user_id = db.Column(db.Integer,db.ForeignKey("user.id"), nullable = False)
+    post_id = db.Column(db.Integer,db.ForeignKey("post.id"), nullable= False)
+
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
+    
+    def delete_comment(self):
+        db.session.delete(self)
+        db.session.commit()
+    
+
+    @classmethod
+    def get_comments(cls,post_id):
+        comments = Comment.query.filter_by(post_id=post_id).all()
+        return comments
+    def __repr__(self):
+        return f'Comment:{self.comment}'

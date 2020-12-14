@@ -1,8 +1,8 @@
 from flask import render_template, url_for, flash, redirect, request, abort, Blueprint
 from flask_login import current_user, login_required
 from quotes import db
-from quotes.models import Post
-from quotes.posts.forms import PostForm
+from quotes.models import Post, Comment
+from quotes.posts.forms import PostForm, CommentForm
 
 posts = Blueprint('posts', __name__)
 
@@ -51,3 +51,15 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('main.home'))
+
+@posts.route("/comment/<int:id>/comment", methods = ['GET','POST'])
+@login_required
+def new_comment(id):
+    all_comments = Post.query.filter_by(id =id).all()
+    postComments = Comment.query.filter_by(post_id = id).all()
+    form = CommentForm()
+    if form.validate_on_submit():
+        comment = form.comment.data
+        new_comment = Comment(post_id=id, comment=comment, user=current_user)
+        new_comment.save_comment()
+    return render_template('comment.html', all_comments= all_comments, postComment=postComments, form= form)

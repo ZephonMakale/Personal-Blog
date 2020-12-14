@@ -1,6 +1,10 @@
 from flask import render_template, request, Blueprint
 from quotes.requests import get_random_quotes
 from quotes.models import Post
+from flask_login import login_required
+
+
+
 
 main = Blueprint('main', __name__)
 
@@ -14,4 +18,5 @@ def home():
 @main.route("/blogs")
 def blogs():
     quotes = get_random_quotes()
-    return render_template('blogs.html', title = 'About', quote= quotes)
+    return render_template('blogs.html', title = 'About', quotes= quotes)
+
