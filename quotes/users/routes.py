@@ -4,6 +4,7 @@ from quotes import db, bcrypt
 from quotes.models import User, Post
 from quotes.users.forms import RegistrationForm, LoginForm, UpdateAccountForm, RequestResetForm, ResetPasswordForm
 from quotes.users.utils import save_picture, send_reset_email
+from ..email import mail_message
 
 users = Blueprint('users', __name__)
 
@@ -18,6 +19,8 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in','success')
+
+        mail_message("Welcome to Quotes","email/welcome_user",user.email,user=user)
         return redirect(url_for('users.login'))
     return render_template('register.html', title = 'Register', form = form)
 

@@ -6,6 +6,7 @@ from flask_login import login_required
 
 
 
+
 main = Blueprint('main', __name__)
 
 @main.route("/")
@@ -19,4 +20,7 @@ def home():
 def blogs():
     quotes = get_random_quotes()
     return render_template('blogs.html', title = 'About', quotes= quotes)
+
+
+
 
