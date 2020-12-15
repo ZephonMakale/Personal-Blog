@@ -4,10 +4,9 @@ from quotes.models import User, Post, Comment
 from quotes import create_app, db
 
 
+
 # app = create_app('development')
 app = create_app('production')
-
-
 
 
 manager = Manager(app)
