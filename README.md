@@ -14,6 +14,9 @@ The user would want to:
 ## Technologies used
 I created the project with (python 3.8), Flask-Microframework, heroku server.
 
+## Live Link 
+Here is the live link to my app https://zeph-blog-app.herokuapp.com/
+
 ## Setup/Installation Requirements
  ### The project require the following installations
    * Python 3 version, I used Python 3.8, but it can run in any python 3 version.
@@ -43,7 +46,7 @@ I created the project with (python 3.8), Flask-Microframework, heroku server.
    * Then create a Pull request
 
 ## Behaviour Driven Development
- ### PITCH-APP
+ ### QUOTES_BLOG_APP
    1. Displays the account, different categories like profile pages.
    2. Enables the user to add a profile.
 ## Known Bugs
