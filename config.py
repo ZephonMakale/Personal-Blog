@@ -3,7 +3,7 @@ import os
 class Config:
     
     SECRET_KEY = 'pitch'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://macbookpro:1Chelsea@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://macbookpro:1Chelsea@localhost/blogs'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     QUOTES_API_KEY = 'http://quotes.stormconsultancy.co.uk/quotes.json'
     
@@ -24,10 +24,10 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://macbookpro:1Chelsea@localhost/pitch_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://macbookpro:1Chelsea@localhost/blog_test'
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://macbookpro:1Chelsea@localhost/pitch"
+    SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://macbookpro:1Chelsea@localhost/blog"
     DEVELOPMENT = True
     DEBUG = True
 
